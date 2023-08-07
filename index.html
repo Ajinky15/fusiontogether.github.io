@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FusionTogether - Empowering Unity for Global Change</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #007bff;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            background-color: #0056b3;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Updated style for highlighting active link */
+        nav a.active {
+            background-color: #0056b3;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+            display: none; /* Hide all sections by default */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>FusionTogether</h1>
+        <h2>Empowering Unity for Global Change</h2>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#BrandVision">Brand Vision</a>
+        <a href="#BrandMission">Brand Mission</a>
+        <a href="#BrandValues">Brand Values</a>
+        <!-- Update the href attribute with properly escaped parentheses -->
+        <a href="#BrandUVPUSP">Brand (UVP)/(USP)</a>
+        <a href="#BrandEssenceKeywords">Brand Essence Keywords</a>
+    </nav>
+
+<img src="logo.png" width="400" height="300">
+
+    <section id="home">
+        <p>Welcome to FusionTogether.</p>
+        <a href="#joinus" class="cta-button">Join Us</a>
+    </section>
+
+    <section id="BrandVision">
+        <h2><u>Brand Vision</u></h2>
+        <p>
+            "United strengths bring positive change and harmony."
+        </p>
+    </section>
+
+    <section id="BrandMission">
+        <h2><u>Brand Mission</u></h2>
+        <p>
+            "FusionTogether empowers people to unite for global solutions."
+        </p>
+    </section>
+
+    <section id="BrandValues">
+        <h2><u>Brand Values</u></h2>
+        <p>
+            Unity, Empowerment, Innovation, Inclusivity, Integrity
+        </p>
+    </section>
+
+    <section id="BrandUVPUSP">
+        <h2><u>Brand (UVP)/(USP)</u></h2>
+        <p>
+            "FusionTogether connects communities for meaningful change."
+        </p>
+    </section>
+
+    <section id="BrandEssenceKeywords">
+        <h2><u>Brand Essence Keywords</u></h2>
+        <p>
+            Teamwork, Enablement, Linkage, Change, Unity
+        </p>
+    </section>
+
+    <section id="joinus">
+        <h2><u>Google Form</u></h2>
+        <p>
+            <a
+                href=https://docs.google.com/forms/d/e/1FAIpQLSenJ2_hu0IPuv-MrFt8QFi56gCzBC9BdioKJDipyIglqEGEJA/viewform?usp=sf_link"
+                target="_blank">Join Us</a>
+        </p>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll("nav a");
+            const ctaButton = document.querySelector(".cta-button");
+            const sections = document.querySelectorAll("section");
+
+            function showSection(event) {
+                event.preventDefault();
+                const target = event.target.getAttribute("href");
+                const selectedSection = document.querySelector(target);
+
+                if (selectedSection) {
+                    sections.forEach((section) => {
+                        section.style.display = "none";
+                    });
+
+                    selectedSection.style.display = "block";
+
+                    // Highlight the active link in the navigation
+                    navLinks.forEach((link) => {
+                        link.classList.remove("active");
+                    });
+
+                    event.target.classList.add("active");
+                }
+            }
+
+            navLinks.forEach((link) => {
+                link.addEventListener("click", showSection);
+            });
+
+            ctaButton.addEventListener("click", showSection);
+        });
+    </script>
+
+
+</body>
+
+</html>
